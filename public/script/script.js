@@ -7,8 +7,8 @@ Instructor: Washington Valencia
 ENTER STUDENT INFORMATION HERE 
 ==========================================
 CCTB project DevOps course
-STUDENT NAME: 
-STUDENT ID:
+STUDENT NAME: Paulo Henrique Araujo Munhoz
+STUDENT ID: CT1004879
 SQAC114
 ==========================================
 
@@ -151,10 +151,21 @@ function AddGroupMember(lastName, firstName) {
 * 
 */
 function RemoveGroupMember() {
-
-	throw "ERROR! You must work in this function before to send to Staging Environment!";
-
+    // Check if there is a selected option to remove
+    if (membersLst.selectedIndex === -1) {
+        throw "Please select a group member to delete.";
+    } else {
+        // Remove the selected option
+        membersLst.remove(membersLst.selectedIndex);
+    }
 }
+
+
+// function RemoveGroupMember() {
+
+// 	throw "ERROR! You must work in this function before to send to Staging Environment!";
+
+// }
 
 /*
 * Function to sort the list of group members in ascending order by last name.
