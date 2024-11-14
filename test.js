@@ -5,11 +5,10 @@ const assert = chai.assert;
 
 let driver;
 
-// Start browser before each test
 before(async () => {
     const options = new firefox.Options();
     options.addArguments('-headless');
-    options.addArguments('window-size=1200x600'); // Set window size for headless mode
+    options.addArguments('window-size=1200x600'); 
 
     driver = await new Builder()
         .forBrowser('firefox')
